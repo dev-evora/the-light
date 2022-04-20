@@ -1,0 +1,46 @@
+{% set site_title = site_title | default('Title') %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="language" content="Russian">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- viewport fix -->
+  <script>
+    /*! function () {
+          var e = screen.width,
+            t = document.querySelector('meta[name="viewport"]'),
+            n = document.createElement("meta");
+          n.setAttribute("name", "viewport"), n.setAttribute("content", "user-scalable=no, width=" + (e <= 375 ? "375" :
+            "device-width")), document.head.replaceChild(n, t)
+        }();*/
+  </script>
+  <!-- end viewport fix -->
+  <meta name="cmsmagazine" content="7a916982225f80c18acab18934b706a8" />
+  <title>{{ site_title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css?v=hash">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    {% include "common/_header.html" %}
+
+    {% block content %}{% endblock %}
+
+    {% include "common/_footer.html" %}
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/libs.min.js?v=hash"></script>
+  <script src="js/common.min.js?v=hash"></script>
+</body>
+
+</html>
