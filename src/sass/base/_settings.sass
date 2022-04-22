@@ -191,3 +191,28 @@ body
       background: #eaeff8
       box-shadow: inset 1px 0px 1px rgba(164, 164, 164, 0.25)
       transition: .2s
+
+.checkbox
+  @include flexbox
+  align-items: flex-start
+  margin-bottom: 25px
+  input
+    @include visually-hidden
+    &:checked + p::before
+      background: $color-yellow-second
+  p
+    position: relative
+    cursor: pointer
+    padding-left: 30px
+    font-size: 14px
+    &::before
+      content: ''
+      position: absolute
+      top: 1px
+      left: 0
+      width: 15px
+      height: 15px
+      border-radius: 2px
+      background: #eaeff8
+      box-shadow: inset 1px 0px 1px rgba(164, 164, 164, 0.25)
+      transition: .2s
