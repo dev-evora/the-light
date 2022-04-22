@@ -105,3 +105,21 @@ body
   &-xxs
     font-size: 12px
     font-weight: 400
+
+.tags
+  @include flexbox
+  align-items: flex-start
+  margin-right: -20px
+  li
+    margin-right: 20px
+    margin-top: 20px
+    a
+      display: block
+      font-size: 14px
+      font-weight: 500
+      padding: 6px 10px
+      border: 1px solid $color-black
+      border-radius: 30px
+      transition: .2s
+      &:hover
+        background: $color-yellow
