@@ -1,0 +1,35 @@
+.design
+  padding: 80px 0
+  &-lamp
+    position: absolute
+    top: 20px
+    right: 110px
+  &-content
+    max-width: 805px
+    .title-lg
+      max-width: 445px
+    .title-md
+      text-transform: uppercase
+      margin-bottom: 25px
+  &-desc
+    margin-top: 25px
+  &-form
+    margin-top: 40px
+  &-row
+    @include flexbox
+    justify-content: space-between
+    align-items: flex-end
+    &__checkbox
+      justify-content: flex-start
+      margin-right: -50px
+      .checkbox
+        margin-right: 50px
+        p
+          @include flexbox
+          align-items: center
+          i
+            margin-right: 10px
+          &::before
+            top: 2px
+  &-col
+    width: calc(100% / 2 - 15px)
