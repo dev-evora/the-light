@@ -1,0 +1,74 @@
+.header
+  &-top
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    padding: 40px 0
+  &-logo
+    @include flexbox
+    align-items: center
+    p
+      font-size: 11px
+      margin-left: 50px
+  &-social
+    @include flexbox
+    align-items: center
+    margin: 0 auto
+    li
+      margin-right: 50px
+      &:last-child
+        margin-right: 0
+  &-contact
+    font-size: 14px
+    @include flexbox
+    align-items: center
+    &__email
+      margin-left: 80px
+      @include flexbox
+      align-items: center
+      a:hover
+        color: #2dc5f4
+      .icon-copy
+        cursor: pointer
+        margin-left: 10px
+  &-cart
+    margin-left: 70px
+  &-bottom
+    @include flexbox
+    align-items: center
+  &-nav
+    @include flexbox
+    align-items: center
+    li
+      margin-right: 80px
+      a
+        padding: 7px 0 5px
+        border-bottom: 2px solid transparent
+        transition: .2s
+        &:hover
+          border-color: $color-yellow-second
+  &-search
+    flex: 1
+    position: relative
+    input
+      width: 100%
+      background: #F3F3F3
+      box-shadow: inset 1px 0px 1px rgba(164, 164, 164, 0.25)
+      border-radius: 3px
+      height: 40px
+      border: 0
+      font-size: 14px
+      padding-left: 15px
+      padding-right: 40px
+      @include placeholder
+        color: $color-gray
+    button
+      position: absolute
+      top: 0
+      right: 0
+      width: 40px
+      height: 40px
+      border: 0
+      border-radius: 0
+      cursor: pointer
+      background: #F3F3F3 url(../img/svg/search.svg) no-repeat center

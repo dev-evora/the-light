@@ -21,6 +21,15 @@ const maskPhone = () => {
 
 maskPhone();
 
+$('.icon-copy').click(function(){
+  const el = $('.header-contact__email a').text();
+  const $tmp = $('<input>');
+  $('body').append($tmp);
+  $tmp.val(el).select();
+  document.execCommand('copy');
+  $tmp.remove();
+});
+
 // card = document.querySelectorAll('.card');
 // if(card){
 // 	let second = new Swiper(".card-slider__second", {
