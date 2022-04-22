@@ -123,3 +123,31 @@ body
       transition: .2s
       &:hover
         background: $color-yellow
+
+.label
+  display: block
+  margin-bottom: 25px
+  margin-top: auto
+  p
+    font-size: 14px
+    font-weight: 500
+    margin-bottom: 15px
+
+.input, .textarea
+  width: 100%
+  border-radius: 4px
+  padding: 20px 25px
+  @include placeholder
+    color: $color-gray
+  font-size: 14px
+  font-weight: 500
+  background: #eaeff8
+  border: 0
+  box-shadow: inset 1px 0px 1px rgba(164, 164, 164, 0.25)
+
+.input
+  height: 55px
+
+.textarea
+  height: 110px
+  resize: none
