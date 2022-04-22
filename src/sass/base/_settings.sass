@@ -166,3 +166,25 @@ body
   &-yellow
     background: $color-yellow
     color: $color-black
+
+.checkbox
+  @include flexbox
+  align-items: flex-start
+  margin-bottom: 25px
+  input
+    @include visually-hidden
+  p
+    position: relative
+    cursor: pointer
+    color: $color-gray
+    padding-left: 30px
+    &::before
+      content: ''
+      position: absolute
+      top: 1px
+      left: 0
+      width: 15px
+      height: 15px
+      border-radius: 2px
+      background: #eaeff8
+      box-shadow: inset 1px 0px 1px rgba(164, 164, 164, 0.25)
