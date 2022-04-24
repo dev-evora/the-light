@@ -30,24 +30,25 @@ $('.icon-copy').click(function(){
   $tmp.remove();
 });
 
-// card = document.querySelectorAll('.card');
-// if(card){
-// 	let second = new Swiper(".card-slider__second", {
-// 		spaceBetween: 15,
-// 		slidesPerView: 3,
-// 		freeMode: true,
-// 		watchSlidesProgress: true,
-// 		direction: "vertical",
-// 		breakpoints: {
-// 			475: {
-// 				slidesPerView: 5
-// 			}
-// 		}
-// 	});
+const trendCarousel = '.trend-carousel';
+if ($(trendCarousel).length) {
+  const slider = new Swiper(trendCarousel, {
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    spaceBetween: 30,
+    slidesPerView: 4,
+    loop: true,
+    navigation: {
+      nextEl: '.trend-next',
+      prevEl: '.trend-prev',
+    },
+  });
+}
 
-// 	let main = new Swiper(".card-slider__main", {
-// 		thumbs: {
-// 			swiper: second,
-// 		},
-// 	});
-// }
+$('.item-tabs li').click(function(){
+  $(this).siblings('li').removeClass('active');
+  $(this).addClass('active');
+});
+
+$('.item-tabs li').first().click();
