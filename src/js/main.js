@@ -46,6 +46,22 @@ if ($(trendCarousel).length) {
   });
 }
 
+const interiorCarousel = '.interior-carousel';
+if ($(interiorCarousel).length) {
+  const slider = new Swiper(interiorCarousel, {
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    spaceBetween: 30,
+    slidesPerView: 4,
+    loop: true,
+    navigation: {
+      nextEl: '.interior-next',
+      prevEl: '.interior-prev',
+    },
+  });
+}
+
 $('.item-tabs li').click(function(){
   $(this).siblings('li').removeClass('active');
   $(this).addClass('active');
