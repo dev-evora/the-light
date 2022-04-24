@@ -66,5 +66,3 @@ $('.item-tabs li').click(function(){
   $(this).siblings('li').removeClass('active');
   $(this).addClass('active');
 });
-
-$('.item-tabs li').first().click();
