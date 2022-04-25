@@ -1,0 +1,73 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Раздел каталога' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-lg">Интерьерный свет</h2>
+    <h3 class="title-sm">Поможем выбрать подходящее решение для квартиры, офиса, магазина или ресторана</h3>
+    <div class="btn-wrap"><a href="#" class="btn btn-yellow">Помочь с выбором</a></div>
+    <div class="promo-section">
+      <h4 class="title-sm">Разделы</h4>
+      <ul class="tags">
+        <li><a href="#">Встроенные</a></li>
+        <li><a href="#">Накладные</a></li>
+        <li><a href="#">Настенные</a></li>
+        <li><a href="#">Декоративные</a></li>
+        <li><a href="#">Треки и компоненты трековой системы</a></li>
+        <li><a href="#">Светильники для трековых систем</a></li>
+        <li><a href="#">Светодиодные ленты</a></li>
+        <li><a href="#">Профили для светодиодных лент</a></li>
+        <li><a href="#">Источники питания светодиодных лент</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="container">
+    {% include 'common/catalog-filter.html' %}
+    <div class="catalog-section">
+      <div class="grid">
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+        {% include 'common/item-card.html' %}
+      </div>
+      <div class="item-more">
+        <i class="icon-more"></i>
+        <p class="title-xs">Показать еще</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'common/lamp-gray.html' %}
+
+<section class="seo">
+  <div class="container">
+    <div class="seo-text">
+      <p>Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

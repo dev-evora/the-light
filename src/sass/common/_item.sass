@@ -95,3 +95,16 @@
     img
       max-height: 100%
 
+
+  &-more
+    @include flexbox
+    align-items: center
+    margin: 40px auto 0
+    width: 145px
+    cursor: pointer
+    p
+      margin-left: 15px
+    .icon-more
+      transition: .4s
+    &:hover .icon-more
+      transform: rotate(360deg)
