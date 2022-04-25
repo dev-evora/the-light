@@ -1,0 +1,87 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Блог' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-lg">Блог</h2>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="container">
+    <!-- -->
+    <div class="blog-promo">
+      <img src="img/blog-single.jpg" alt="">
+      <div class="blog-promo__content white">
+        <h2 class="title-lg">Лофт свет в ЖК Светлановский</h2>
+        <h3 class="title-sm">Лофт 7 августа, 2021</h3>
+        <ul class="blog-item__tags title-xxs">
+          <li># Освещение на кухни</li>
+          <li># Трековые системы</li>
+        </ul>
+      </div>
+      <script src="https://yastatic.net/share2/share.js"></script>
+      <div class="blog-share">
+        <div class="ya-share2" data-curtain data-shape="round" data-limit="0" data-more-button-type="long" data-popup-direction="top" data-services="vkontakte,odnoklassniki,telegram,viber,whatsapp"></div>
+      </div>
+    </div>
+    <!-- -->
+    <div class="blog-single">
+      <h2 class="title-lg">Подзаголовок статьи</h2>
+      <div class="blog-single__text">
+        <p>Текст статьи Лофт – это не просто мода на дизайн с кирпичными стенами, это полноценный стиль в истории интерьера, со своими особенностями и узнаваемыми признаками. И в отличие от большинства других интерьерных веяний современности лофт не был придуман "с нуля" архитекторами и дизайнерами – его отличительные черты оказались продиктованы обстоятельствами и самой историей этого изначально безденежного и богемного стиля.</p>
+        <p>Начнем с того, что настоящий лофт – это жилье, переделанное из здания, которое строилось совсем с другими целями и поэтому совсем не в жилых масштабах. Как правило, речь идет о бывших фабричных цехах или складах. Зародилась эта необычная идея в Америке во времена Великой депрессии, когда предприятия банкротились один за другим и пустеющие промышленные здания, заполонившие собой Манхэттен, Сохо и Квинс, стали сдаваться внаем буквально по бросовым ценам.</p>
+      </div>
+      <ul class="blog-single__gallery">
+        <li><a href="img/blog-item.jpg" data-fancybox="blog-gallery-1"><img src="img/blog-item.jpg" alt=""></a></li>
+        <li><a href="img/blog-item.jpg" data-fancybox="blog-gallery-1"><img src="img/blog-item.jpg" alt=""></a></li>
+        <li><a href="img/blog-item.jpg" data-fancybox="blog-gallery-1"><img src="img/blog-item.jpg" alt=""></a></li>
+        <li><a href="img/blog-item.jpg" data-fancybox="blog-gallery-1"><img src="img/blog-item.jpg" alt=""></a></li>
+        <li><a href="img/blog-item.jpg" data-fancybox="blog-gallery-1"><img src="img/blog-item.jpg" alt=""></a></li>
+      </ul>
+    </div>
+    <!-- -->
+    <div class="blog-form">
+      <h3 class="title-lg">Не уверены, что этот товар подойдет?</h3>
+      <h4 class="title-sm">Оставьте заявку и мы поможем подобрать подходящее световое оборудование и комплектующие</h4>
+      <form action="#" method="post">
+        <label class="label">
+          <p>Как к вам обращаться?</p>
+          <input type="text" class="input" placeholder="Введите имя" />
+        </label>
+        <label class="label">
+          <p>Ваш телефон</p>
+          <input type="tel" class="input masked" placeholder="+7 (___) ___-__-__" />
+        </label>
+        <div class="btn-wrap"><button type="submit" class="btn btn-yellow">Помочь с выбором</button></div>
+        <label class="politic">
+          <input type="checkbox" />
+          <p>Согласие на обработку персональных данных</p>
+        </label>
+      </form>
+    </div>
+    <!-- -->
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="blog-best">
+      <h2 class="title-lg">Похожие статьи</h2>
+      <div class="blog-grid">
+        {% include 'common/blog-item-sm.html' %}
+        {% include 'common/blog-item-sm.html' %}
+        {% include 'common/blog-item-sm.html' %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

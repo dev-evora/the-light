@@ -4,6 +4,8 @@
     margin-bottom: 80px
     .title-md
       text-transform: uppercase
+    .title-lg
+      text-align: center
   &-grid
     @include flexbox
     align-items: flex-start
@@ -59,3 +61,91 @@
         margin-top: 25px
       .blog-item__date
         margin-top: 15px
+
+  &-promo
+    width: 100%
+    height: 490px
+    position: relative
+    z-index: 10
+    padding: 90px 100px
+    margin-bottom: 80px
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+    &__content
+      position: relative
+      z-index: 10
+      max-width: 450px
+      .title-sm
+        margin-top: 20px
+      .blog-item__tags
+        margin-top: 25px
+      &.white
+        color: #fff
+
+  &-share
+    position: absolute
+    right: 20px
+    bottom: 20px
+    background: #fff
+    border-radius: 17px
+
+  &-single
+    margin-bottom: 80px
+    &__text
+      margin-top: 30px
+      p
+        margin-top: 20px
+    &__gallery
+      margin-top: 80px
+      @include flexbox
+      align-items: flex-start
+      margin-left: -15px
+      margin-right: -15px
+      &:first-child
+        margin-top: 0
+      img
+        object-fit: cover
+        object-position: center
+        width: 100%
+        height: 100%
+      li
+        width: calc(100% / 4 - 30px)
+        margin: 30px 15px 0
+        height: 150px
+        &:first-child
+          width: calc(100% - 30px)
+          margin-top: 0
+          height: 430px
+
+  &-form
+    .title-lg
+      text-align: center
+      margin-bottom: 25px
+    .title-sm
+      text-align: center
+      margin-bottom: 40px
+    form
+      @include flexbox
+      align-items: flex-start
+      max-width: 1080px
+      margin: 0 auto
+    .label
+      width: calc((100% - 60px - 250px) / 2)
+      margin-right: 30px
+    .btn
+      width: 250px
+      height: 55px
+      padding-top: 19px
+      padding-bottom: 19px
+    .btn-wrap
+      margin-top: 31px
+    .politic
+      width: 250px
+      margin-left: auto
+      margin-bottom: 0
