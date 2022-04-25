@@ -225,3 +225,23 @@ body
       background: #eaeff8
       box-shadow: inset 1px 0px 1px rgba(164, 164, 164, 0.25)
       transition: .2s
+
+.head
+  .title-sm
+    margin-top: 20px
+    max-width: 550px
+  .btn-wrap
+    margin-top: 40px
+
+.breadcrumbs
+  margin-bottom: 40px
+  font-size: 14px
+  display: block
+  li
+    display: inline
+    color: $color-gray
+    &::after
+      content: '>'
+      padding-left: 4px
+    &:last-child::after
+      display: none
