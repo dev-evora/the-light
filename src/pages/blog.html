@@ -1,0 +1,38 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Блог' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-lg">Блог</h2>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="container">
+    <div class="blog-best">
+      <h2 class="title-md">Лучшие статьи</h2>
+      <div class="blog-grid">
+        {% include 'common/blog-item-sm.html' %}
+        {% include 'common/blog-item-sm.html' %}
+        {% include 'common/blog-item-sm.html' %}
+      </div>
+    </div>
+    {% include 'common/blog-item.html' %}
+    {% include 'common/blog-item.html' %}
+    {% include 'common/blog-item.html' %}
+    {% include 'common/blog-item.html' %}
+    <div class="item-more">
+      <i class="icon-more"></i>
+      <p class="title-xs">Показать еще</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+.blog
+  padding-bottom: 80px
+  &-best
+    margin-bottom: 80px
+    .title-md
+      text-transform: uppercase
+  &-grid
+    @include flexbox
+    align-items: flex-start
+    margin: 0 -15px
+    .blog-item
+      width: calc(100% / 3 - 30px)
+      margin: 30px 15px 0
+  &-item
+    @include flexbox
+    align-items: flex-start
+    position: relative
+    margin-bottom: 30px
+    &__img
+      width: 595px
+      height: 330px
+      object-fit: cover
+      object-position: center
+    &__content
+      width: calc(100% - 595px - 30px)
+      margin-left: 30px
+      a
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          z-index: 5
+      .title-md
+        text-transform: uppercase
+    &__text
+      margin-top: 30px
+      p
+        margin-top: 15px
+    &__date
+      color: $color-gray
+      margin-top: 30px
+    &__tags
+      @include flexbox
+      align-items: flex-start
+      color: $color-gray
+      li
+        margin-right: 15px
+        margin-top: 15px
+    &-sm
+      display: block
+      .blog-item__img
+        width: 100%
+      .blog-item__content
+        width: 100%
+        margin-left: 0
+        margin-top: 25px
+      .blog-item__date
+        margin-top: 15px
