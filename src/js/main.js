@@ -66,3 +66,31 @@ $('.item-tabs li').click(function(){
   $(this).siblings('li').removeClass('active');
   $(this).addClass('active');
 });
+
+const portfolioGallery = '.portfolio-gallery__main';
+const portfolioGalleryThumb = '.portfolio-gallery__thumb';
+if ($(portfolioGallery).length) {
+  const thumb = new Swiper(portfolioGalleryThumb, {
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    spaceBetween: 10,
+    slidesPerView: 11,
+    navigation: {
+      nextEl: '.portfolio-next',
+      prevEl: '.portfolio-prev',
+    },
+  });
+  const slider = new Swiper(portfolioGallery, {
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.portfolio-next',
+      prevEl: '.portfolio-prev',
+    },
+    thumbs: {
+      swiper: thumb,
+    },
+  });
+}
