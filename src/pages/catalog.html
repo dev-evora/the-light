@@ -1,0 +1,48 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Каталог' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-lg">Каталог</h2>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="container">
+    <div class="catalog-section">
+      <div class="catalog-section__title"><a href="#">Интерьерный свет (80)</a><i class="icon-arrow"></i></div>
+      <div class="grid">
+        {% include 'common/item-catalog.html' %}
+        {% include 'common/item-catalog.html' %}
+        {% include 'common/item-catalog.html' %}
+        {% include 'common/item-catalog.html' %}
+      </div>
+    </div>
+    <div class="catalog-section">
+      <div class="catalog-section__title"><a href="#">Трековые системы (16)</a><i class="icon-arrow"></i></div>
+      <div class="grid">
+        {% include 'common/item-catalog.html' %}
+        {% include 'common/item-catalog.html' %}
+      </div>
+    </div>
+    <div class="catalog-section">
+      <div class="catalog-section__title"><a href="#">Светодиодные ленты и аксессуары (83)</a><i class="icon-arrow"></i></div>
+      <div class="grid">
+        {% include 'common/item-catalog.html' %}
+        {% include 'common/item-catalog.html' %}
+        {% include 'common/item-catalog.html' %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'common/lamp-gray.html' %}
+
+{% endblock %}

@@ -94,3 +94,10 @@ if ($(portfolioGallery).length) {
     },
   });
 }
+
+$('.catalog-section__title .icon-arrow').click(function(){
+  const main = $(this).closest('.catalog-section');
+  main.toggleClass('hide');
+  main.find('.grid').slideToggle(300);
+  $(this).toggleClass('active');
+});

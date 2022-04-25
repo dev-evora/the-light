@@ -95,6 +95,16 @@ body
   height: 20px
   background: url(../img/svg/load.svg) no-repeat center
 
+.icon-arrow
+  display: block
+  width: 18px
+  height: 18px
+  background: url(../img/svg/arrow.svg) no-repeat center
+  cursor: pointer
+  transition: .3s
+  &.active
+    transform: rotate(-180deg)
+
 .title
   &-lg
     font-size: 36px
@@ -246,3 +256,11 @@ body
       padding-left: 4px
     &:last-child::after
       display: none
+
+.grid
+  @include flexbox
+  align-items: flex-start
+  margin: 0 -15px
+  .item-card
+    width: calc(100% / 4 - 30px)
+    margin: 30px 15px 0
