@@ -1,0 +1,34 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Результаты поиска отсутствуют' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-lg">Результаты поиска “светорпа” отсутствуют</h2>
+    <h3 class="title-sm">Повторите попытку, используя другое написание или ключевые слова. Или ищите товары внутри разделов</h3>
+    <div class="promo-section">
+      <h4 class="title-sm">Разделы</h4>
+      <ul class="tags">
+        <li><a href="#">Встроенные</a></li>
+        <li><a href="#">Накладные</a></li>
+        <li><a href="#">Настенные</a></li>
+        <li><a href="#">Декоративные</a></li>
+        <li><a href="#">Треки и компоненты трековой системы</a></li>
+        <li><a href="#">Светильники для трековых систем</a></li>
+        <li><a href="#">Светодиодные ленты</a></li>
+        <li><a href="#">Профили для светодиодных лент</a></li>
+        <li><a href="#">Источники питания светодиодных лент</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% include 'common/lamp-gray.html' %}
+
+{% endblock %}
