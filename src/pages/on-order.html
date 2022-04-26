@@ -1,0 +1,24 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Под заказ' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-lg">Под заказ</h2>
+  </div>
+</section>
+
+<section class="portfolio-page">
+  <div class="container">
+    {% include 'common/item-on-order.html' %}
+    {% include 'common/item-on-order.html' %}
+  </div>
+</section>
+
+{% endblock %}
