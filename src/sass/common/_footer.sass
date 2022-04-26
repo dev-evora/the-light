@@ -1,0 +1,46 @@
+.footer
+  padding: 80px 0
+  background: $color-gray-light
+  &-row
+    @include flexbox
+    align-items: flex-start
+    margin: 0 -15px
+  &-col-2
+    width: calc((100% / 12) * 2 - 30px)
+    margin: 0 15px
+  &-col-3
+    width: calc((100% / 12) * 3 - 30px)
+    margin: 0 15px
+  &-nav
+    font-size: 14px
+    // font-weight: 500
+    line-height: 1.5
+    li
+      margin-top: 25px
+      &:first-child
+        margin-top: 0
+      a
+        // transition: .2s
+        border-bottom: 2px solid transparent
+        padding-bottom: 2px
+        &:hover
+          border-color: $color-yellow
+          span
+            border-color: transparent
+    small
+      font-size: 9px
+      span
+        font-size: 12px
+        border-bottom: 1px solid $color-black
+  &-logo
+    p
+      margin-top: 20px
+      font-size: 14px
+  &-social
+    @include flexbox
+    align-items: center
+    margin-top: 25px
+    li
+      margin-right: 20px
+  .btn-wrap
+    margin-top: 50px
