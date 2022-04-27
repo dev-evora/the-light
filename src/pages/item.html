@@ -103,22 +103,14 @@
         </div>
         <div class="card-buy">
           <h4 class="title-md">24 000 ₽</h4>
-          <div class="count">
-            <div class="count-btn count-btn__minus">-</div>
-            <input type="number" value="1" />
-            <div class="count-btn count-btn__plus">+</div>
-          </div>
+          {% include 'common/count.html' %}
           <div class="card-buy__status">В наличии 100 шт</div>
           <div class="btn-wrap"><a href="#" class="btn btn-yellow">Добавить в заказ</a></div>
         </div>
         {# если нет в наличии #}
         <!--<div class="card-buy card-buy__disabled">
           <h4 class="title-md">24 000 ₽</h4>
-          <div class="count">
-            <div class="count-btn count-btn__minus">-</div>
-            <input type="number" value="1" />
-            <div class="count-btn count-btn__plus">+</div>
-          </div>
+          {% include 'common/count.html' %}
           <div class="card-buy__status">Нет в наличии</div>
           <div class="btn-wrap"><a href="#" class="btn btn-yellow">Добавить в заказ</a></div>
           <a href="#" class="card-buy__link">Уточнить сроки доставки</a>
