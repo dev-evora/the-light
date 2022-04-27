@@ -1,0 +1,88 @@
+.order
+  margin-bottom: 80px
+  .title-md
+    text-transform: uppercase
+  &-count
+    margin-top: 20px
+    color: $color-gray
+    font-size: 16px
+    font-weight: 400
+    margin-bottom: 35px
+  &-top
+    @include flexbox
+    align-items: flex-end
+    justify-content: space-between
+    &__links
+      @include flexbox
+      align-items: center
+      li
+        margin-right: 50px
+        &:last-child
+          margin-right: 0
+      a
+        @include flexbox
+        align-items: center
+        font-size: 14px
+        i
+          margin-right: 10px
+      .icon-pdf
+        width: 24px
+        height: 24px
+        background-size: cover
+    &__total
+      @include flexbox
+      align-items: flex-end
+      .title-lg
+        margin-bottom: -4px
+        margin-left: 30px
+
+.table
+  margin-top: 40px
+  counter-reset: item
+  &-head
+    @include flexbox
+    align-items: center
+    padding: 10px 30px
+    background: #e3e3e3
+    border-radius: 5px
+    font-size: 12px
+  &-col
+    width: 130px
+    &:first-child
+      width: 15px
+      text-align: center
+    &:nth-child(2)
+      width: 180px
+      margin-left: 30px
+    &:nth-child(3)
+      flex: 1
+      margin: 0 30px
+    &:last-child
+      @include flexbox
+      align-items: center
+  &-item
+    @include flexbox
+    align-items: flex-start
+    padding: 30px
+    border-bottom: 1px solid #E3E3E3
+    font-size: 14px
+    &:last-child
+      border-bottom: 0
+    .table-col:first-child::before
+      counter-increment: item
+      content: counter(item)
+    .icon-delete
+      margin-left: auto
+      cursor: pointer
+  &-img
+    width: 100%
+    height: 160px
+    object-fit: cover
+    object-position: center
+    border-radius: 4px
+  &-list
+    margin-top: 10px
+    li
+      margin-top: 5px
+    span
+      color: $color-gray

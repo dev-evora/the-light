@@ -209,3 +209,11 @@ $('.card-label__color input').click(function(){
 tippy('[data-tippy-content]', {
   theme: 'thelight',
 });
+
+function declOfNum(number, words) {
+  return words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? Math.abs(number) % 10 : 5]];
+}
+
+$('.table-item').each(function(i){
+  $('.order-count').text(i+1 + ' ' + declOfNum(i+1, ['товар', 'товара', 'товаров']));
+});

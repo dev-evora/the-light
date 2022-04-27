@@ -1,0 +1,43 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Заказ' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    {% include 'common/breadcrumbs.html' %}
+    <h2 class="title-lg">Отправьте заявку для формирования счета</h2>
+    <h3 class="title-sm">После получения вашей заявки мы сформируем счет на оплату. Свяжемся с вами в течение 30 минут, чтобы согласовать условия оплаты и доставку.</h3>
+  </div>
+</section>
+
+<section class="order">
+  <div class="container">
+    <h2 class="title-md">Смета</h2>
+    <h3 class="order-count">0 товаров</h3> {# счетчик сам считает и склоняет #}
+    <div class="order-top">
+      <ul class="order-top__links">
+        <li><a href="#"><i class="icon-pdf"></i>Скачать PDF</a></li>
+        <li><a href="#"><i class="icon-print"></i>Распечатать</a></li>
+      </ul>
+      <div class="order-top__total">Общая сумма заказа <h4 class="title-lg">144 000 ₽</h4></div>
+    </div>
+    <div class="table">
+      <div class="table-head">
+        <div class="table-col">№</div>
+        <div class="table-col">Товар</div>
+        <div class="table-col">Описание</div>
+        <div class="table-col">Наличие</div>
+        <div class="table-col">Цена</div>
+        <div class="table-col">Количество</div>
+        <div class="table-col">Сумма</div>
+      </div>
+      {% include 'common/table-item.html' %}
+      {% include 'common/table-item.html' %}
+      {% include 'common/table-item.html' %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
