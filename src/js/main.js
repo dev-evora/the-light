@@ -101,3 +101,13 @@ $('.catalog-section__title .icon-arrow').click(function(){
   main.find('.grid').slideToggle(300);
   $(this).toggleClass('active');
 });
+
+$('.promo-list li').hover(function(){
+  const id = $(this).attr('data-id');
+
+  $('.promo-list li').removeClass('active');
+  $(this).addClass('active');
+
+  $('.promo-img img').removeClass('active');
+  $('.promo-img img[data-id='+id+']').addClass('active');
+});

@@ -1,3 +1,67 @@
 .promo
   padding-bottom: 80px
   border-bottom: 1px solid $color-gray
+  &-content
+    padding: 100px 0 150px
+    @include flexbox
+    align-items: flex-end
+    justify-content: space-between
+    position: relative
+  &-text
+    max-width: 390px
+    .title-sm
+      max-width: 250px
+      margin-top: 35px
+  &-right
+    .btn-wrap
+      justify-content: flex-end
+      margin-top: 80px
+  &-list
+    text-transform: uppercase
+    font-size: 24px
+    text-align: right
+    li
+      margin-top: 50px
+      cursor: pointer
+      position: relative
+      transition: .2s
+      &:first-child
+        margin-top: 0
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        width: 4px
+        opacity: 0
+        background: $color-yellow-second
+        transition: .2s
+      &.active
+        padding-right: 30px
+        font-weight: 700
+        &::before
+          opacity: 1
+  &-img
+    width: 480px
+    height: 480px
+    @include flexbox
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto 0
+    left: 335px
+    z-index: -1
+    img
+      width: 100%
+      height: 100%
+      background: #fff
+      object-fit: scale-down
+      object-position: center
+      opacity: 0
+      position: absolute
+      transition: .2s
+      &.active
+        opacity: 1
