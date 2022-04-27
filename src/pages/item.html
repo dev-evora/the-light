@@ -1,0 +1,210 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Страница товара' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-lg">Vader on</h2>
+    <h3 class="title-sm">Светильник для зонирования</h3>
+  </div>
+</section>
+
+<section class="card">
+  <div class="container">
+    <div class="card-row">
+      <div class="card-gallery">
+        <div class="card-gallery__thumb">
+          <div class="card-gallery__arrow card-gallery__arrow-prev"></div>
+          <div class="card-gallery__arrow card-gallery__arrow-next"></div>
+          <div class="swiper-wrapper">
+            {#
+              data-color только для миниатюр, подсасывает из характеристик
+              если у цвета нет картинки, то не добавлять data-color
+
+              желательно первыми ставить цвета, чтобы избежать резких прыжков слайдера
+             #}
+            <div class="swiper-slide" data-color="Черный"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide" data-color="Белый"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide" data-color="Коричневый"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="card-gallery__main">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/card-item.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-spec">
+          <h3 class="title-md">Основные характеристики</h3>
+          <ul class="card-spec__list card-spec__list-inline">
+            <li>
+              <span>Цвет корпуса<i class="icon-tooltip" data-tippy-content="Какой-то текст описание чего-то там"></i></span>
+              <p class="card-label__row">
+                <label class="card-label card-label__color">
+                  <input type="radio" name="color" value="Черный" checked />
+                  <small><i style="background:#000;"></i>Черный</small>
+                </label>
+                <label class="card-label card-label__color">
+                  <input type="radio" name="color" value="Белый" />
+                  <small><i style="background:#fff;"></i>Белый</small>
+                </label>
+                <label class="card-label card-label__color">
+                  <input type="radio" name="color" value="Коричневый" />
+                  <small><i style="background:#645353;"></i>Коричневый</small>
+                </label>
+              </p>
+            </li>
+            <li>
+              <span>Световая температура</span>
+              <p class="card-label__row">
+                <label class="card-label">
+                  <input type="radio" name="temp" value="2700К" checked />
+                  <small>2700К</small>
+                </label>
+                <label class="card-label">
+                  <input type="radio" name="temp" value="3000К" />
+                  <small>3000К</small>
+                </label>
+                <label class="card-label">
+                  <input type="radio" name="temp" value="4000К" />
+                  <small>4000К</small>
+                </label>
+              </p>
+            </li>
+            <li>
+              <span>Размеры<i class="icon-tooltip" data-tippy-content="и еще один текст"></i></span>
+              <p>400 мм x 500 мм x 5000 мм</p>
+            </li>
+            <li>
+              <span>Угол светового потока</span>
+              <p>120°</p>
+            </li>
+            <li>
+              <span>Глубина встраивания</span>
+              <p>40 мм</p>
+            </li>
+            <li>
+              <span>Индекс цветопередачи</span>
+              <p>90+Ra</p>
+            </li>
+          </ul>
+        </div>
+        <div class="card-buy">
+          <h4 class="title-md">24 000 ₽</h4>
+          <div class="count">
+            <div class="count-btn count-btn__minus">-</div>
+            <input type="number" value="1" />
+            <div class="count-btn count-btn__plus">+</div>
+          </div>
+          <div class="card-buy__status">В наличии 100 шт</div>
+          <div class="btn-wrap"><a href="#" class="btn btn-yellow">Добавить в заказ</a></div>
+        </div>
+        {# если нет в наличии #}
+        <!--<div class="card-buy card-buy__disabled">
+          <h4 class="title-md">24 000 ₽</h4>
+          <div class="count">
+            <div class="count-btn count-btn__minus">-</div>
+            <input type="number" value="1" />
+            <div class="count-btn count-btn__plus">+</div>
+          </div>
+          <div class="card-buy__status">Нет в наличии</div>
+          <div class="btn-wrap"><a href="#" class="btn btn-yellow">Добавить в заказ</a></div>
+          <a href="#" class="card-buy__link">Уточнить сроки доставки</a>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card-tech">
+  <div class="container">
+    <div class="card-tech__row">
+      <div class="card-tech__left">
+        <div class="card-text">
+          <p>Серия накладных светильников Vader on для зонирования помещения, а так же для создания декоративного освещения. Светильник гармонично смотрится в пространстве и создаёт дополнительный объём интерьеру. Особая конструкция рефлектора сводит к минимуму слепящий эффект.</p>
+          <p>Кроме представленных классических белого и чёрного цветов, корпус светильника возможно окрасить в любой другой цвет по палитре RAL.</p>
+        </div>
+        <div class="card-tech__download">
+          <p>Скачать файлы:</p>
+          <a href="#"><i class="icon-load"></i>Cкачать 3D</a>
+          <a href="#"><i class="icon-pdf"></i>Инструкция PDF</a>
+        </div>
+      </div>
+      <div class="card-spec">
+        <h3 class="title-md">Другие характеристики</h3>
+        <ul class="card-spec__list">
+          <li>
+            <span>Тип</span>
+            <p>90+Ra</p>
+          </li>
+          <li>
+            <span>Напряжение</span>
+            <p>24 В</p>
+          </li>
+          <li>
+            <span>Мощность</span>
+            <p>9 Вт/метр</p>
+          </li>
+          <li>
+            <span>Влагозащита</span>
+            <p>IP20</p>
+          </li>
+          <li>
+            <span>Гарантия</span>
+            <p>2 года</p>
+          </li>
+          <li>
+            <span>Управление</span>
+            <p>Пульт</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card-desc">
+  <div class="container">
+    <h2 class="title-lg">Дополнительное описание</h2>
+    <div class="card-text">
+      <p>Серия накладных светильников Vader on для зонирования помещения, а так же для создания декоративного освещения. Светильник гармонично смотрится в пространстве и создаёт  Серия накладных светильников Vader on для зонирования помещения, а так же для создания декоративного освещения. Светильник гармонично смотрится в пространстве и создаёт Серия накладных светильников Vader on для зонирования помещения, а так же для создания декоративного освещения. Светильник гармонично смотрится в пространстве и создаёт </p>
+    </div>
+  </div>
+</section>
+
+<section class="card-more">
+  <div class="container">
+    <h2 class="title-lg">Светильники для трековых систем</h2>
+    <div class="grid">
+      {% include 'common/item-card.html' %}
+      {% include 'common/item-card.html' %}
+      {% include 'common/item-card.html' %}
+      {% include 'common/item-card.html' %}
+    </div>
+  </div>
+</section>
+
+<section class="card-end">
+  <div class="container">
+    <h2 class="title-lg">В интерьере</h2>
+    <a href="img/blog-item.jpg" data-fancybox class="card-end__img"><img src="img/blog-item.jpg" alt=""></a>
+    {% include 'common/blog-form.html' %}
+  </div>
+</section>
+
+{% endblock %}

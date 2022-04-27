@@ -111,6 +111,18 @@ body
   height: 24px
   background: url(../img/svg/more.svg) no-repeat center
 
+.icon-pdf
+  display: block
+  width: 20px
+  height: 20px
+  background: url(../img/svg/pdf.svg) no-repeat center
+
+.icon-tooltip
+  display: block
+  width: 15px
+  height: 15px
+  background: url(../img/svg/tooltip.svg) no-repeat center
+
 .title
   &-lg
     font-size: 36px
@@ -293,3 +305,24 @@ body
   .item-card
     width: calc(100% / 4 - 30px)
     margin: 30px 15px 0
+
+.count
+  @include flexbox
+  align-items: center
+  &-btn
+    cursor: pointer
+    @include flexbox
+    align-items: center
+    justify-content: center
+    width: 20px
+    height: 20px
+    border-radius: 4px
+    background: #EAEFF8
+    box-shadow: inset 1px 0px 1px rgba(164, 164, 164, 0.25)
+    font-weight: 500
+  input
+    height: 20px
+    width: 30px
+    text-align: center
+    border: 0
+    font-weight: 400
