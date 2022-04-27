@@ -112,20 +112,17 @@ $('.promo-list li').hover(function(){
   $('.promo-img img[data-id='+id+']').addClass('active');
 });
 
-const btnTitle = $('.label-file span');
-const btnWrap = $('.label-file');
-
 $('.label-file input:file').change(function () {
   if (this.files && this.files.length >= 1) {
     const file = this.files[0];
     const reader = new FileReader();
 
     reader.onload = function (e) {
-      btnTitle.html('Файл прикреплен');
+      $('.label-file span').text('Файл прикреплен');
     },
     reader.readAsDataURL(file);
   } else {
-    btnTitle.html('Выберите файл');
+    $('.label-file span').text('Выберите файл');
   }
 });
 
