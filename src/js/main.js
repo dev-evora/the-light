@@ -128,3 +128,35 @@ $('.label-file input:file').change(function () {
     btnTitle.html('Выберите файл');
   }
 });
+
+$('.catalog-filter__title').click(function(){
+  const thisDropdown = $(this).next();
+
+  $('.catalog-filter__dropdown').slideUp(300);
+
+  if (thisDropdown.is(':hidden')){
+    thisDropdown.slideDown(300);
+  }
+});
+
+$('.catalog-filter__subtitle').click(function(){
+  $(this).next().slideToggle(300);
+});
+
+$('.catalog-filter__all').click(function(){
+  const checkbox = $(this).closest('.catalog-filter__dropdown').find('input:checkbox');
+
+  checkbox.prop('checked', true);
+});
+
+$('.catalog-filter__submit button').click(function(){
+  const dropdown = $(this).closest('.catalog-filter__dropdown');
+
+  dropdown.slideUp(300);
+
+  if (dropdown.find('input:checkbox:checked').length > 0){
+    dropdown.prev().addClass('active');
+  } else {
+    dropdown.prev().removeClass('active');
+  }
+});
