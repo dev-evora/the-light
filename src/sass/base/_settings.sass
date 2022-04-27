@@ -154,6 +154,25 @@ body
     font-size: 14px
     font-weight: 500
     margin-bottom: 15px
+  &-file
+    input
+      @include visually-hidden
+    &__drop
+      display: block
+      width: 100%
+      border-radius: 4px
+      height: 55px
+      @include flexbox
+      align-items: center
+      justify-content: center
+      border: 1px dashed $color-gray
+      cursor: pointer
+      font-size: 14px
+      font-weight: 500
+      color: $color-gray
+      span
+        color: #8699fe
+        border-bottom: 1px solid #8699FE
 
 .input, .textarea
   width: 100%

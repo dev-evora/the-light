@@ -48,7 +48,7 @@
     <div class="design-content">
       <h2 class="title-lg">Подберём освещение для дизайн-проекта</h2>
       <div class="design-desc title-sm">Наш эксперт изучит ваш дизайн-проект.<br> Учтёт назначение и расположение осветительного оборудования, особенности монтажа.<br> Подберёт подходящие светильники и комплектующие.</div>
-      <form action="#" method="post" class="design-form">
+      <form action="#" method="post" class="design-form" enctype="multipart/form-data">
         <div class="design-row">
           <div class="design-col">
             <label class="label">
@@ -65,7 +65,10 @@
             </label>
           </div>
           <div class="design-col">
-            {# TODO поле для загрузки файла #}
+            <label class="label label-file">
+              <input type="file" name="file" />
+              <div class="label-file__drop"><span>Выберите файл</span></div>
+            </label>
           </div>
         </div>
         <div class="design-row">
