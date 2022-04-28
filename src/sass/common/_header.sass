@@ -1,5 +1,7 @@
 .header
   padding-bottom: 40px
+  position: relative
+  z-index: 100
   &-top
     @include flexbox
     align-items: center
@@ -61,6 +63,8 @@
         transition: .2s
         &:hover
           border-color: $color-yellow-second
+      &.active a
+        border-color: $color-yellow-second
   &-search
     flex: 1
     position: relative
@@ -86,3 +90,38 @@
       border-radius: 0
       cursor: pointer
       background: #F3F3F3 url(../img/svg/search.svg) no-repeat center
+
+  &-catalog
+    background: #fff
+    position: absolute
+    top: calc(100% + 30px)
+    left: 10px
+    right: 10px
+    z-index: 10
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.05)
+    padding: 0 50px 100px
+    display: none
+    &__row
+      @include flexbox
+      align-items: flex-start
+      margin-right: -30px
+    &__col
+      width: calc(100% / 3 - 30px)
+      margin-right: 30px
+      margin-top: 30px
+    &__title
+      color: $color-gray
+    &__list
+      li
+        margin-top: 25px
+        font-size: 14px
+        a
+          transition: .2s
+          &:hover
+            font-weight: 700
+    &__overlay
+      position: absolute
+      left: -1000px
+      right: -1000px
+      top: 100%
+      height: 1000px

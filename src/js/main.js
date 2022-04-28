@@ -217,3 +217,13 @@ function declOfNum(number, words) {
 $('.table-item').each(function(i){
   $('.order-count').text(i+1 + ' ' + declOfNum(i+1, ['товар', 'товара', 'товаров']));
 });
+
+$('.js-catalog').hover(function(){
+  $('.header-catalog').slideDown(300);
+  $(this).addClass('active');
+});
+
+$('.header-catalog__overlay').hover(function(){
+  $('.header-catalog').slideUp(300);
+  $('.js-catalog').removeClass('active');
+});
