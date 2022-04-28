@@ -1,0 +1,138 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Контакты' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    {% include 'common/breadcrumbs.html' %}
+    <h2 class="title-lg">Контакты</h2>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <ul class="contact-list">
+      <li>
+        <span>Адрес:</span>
+        <p>Санкт-Петербург, ул. Железноводская 32</p>
+      </li>
+      <li>
+        <span>Режим работы:</span>
+        <p>Пн – Пт: с 11:00 до 20:00</p>
+      </li>
+      <li>
+        <span>Контактный телефон:</span>
+        <p><a href="tel:+7 (921) 383-34-21">+7 (921) 383-34-21</a></p>
+      </li>
+      <li>
+        <span>Мессенджеры:</span>
+        <p class="contact-social">
+          <a href="#"><i class="icon-tg icon-none"></i>telegram</a>
+          <a href="#"><i class="icon-wa icon-none"></i>whatsapp</a>
+        </p>
+      </li>
+      <li>
+        <span>E-mail:</span>
+        <p><a href="mailto:ab@thelightspb.ru">ab@thelightspb.ru</a></p>
+      </li>
+    </ul>
+    <div class="contact-map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad001d2a46a29e2cf0e4e509148cade4d63f73bb78eaf5c7707a57dd10d49b1a7&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script></div>
+    <div class="contact-row">
+      <div class="contact-main">
+        <div class="contact-section">
+          <h2 class="title-lg">Правовая информация</h2>
+          <ul class="contact-list">
+            <li>
+              <span>Наименование компании (полное наименование)</span>
+              <p>Индивидуальный предприниматель Барков Алексей Павлович</p>
+            </li>
+            <li>
+              <span>Наименование компании (сокращенное наименование)</span>
+              <p>ИП Барков А.П.</p>
+            </li>
+            <li>
+              <span>ИНН</span>
+              <p>781430785659</p>
+            </li>
+            <li>
+              <span>ОГРНИП</span>
+              <p>318784700052846</p>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-section">
+          <h2 class="title-lg">Адресная информация</h2>
+          <ul class="contact-list">
+            <li>
+              <span>Юридический адрес</span>
+              <p>г. Санкт-Петербург, Комендантский<br> пр-кт д. 39, к 1, кв. 3</p>
+            </li>
+            <li>
+              <span>Почтовый адрес</span>
+              <p>г. Санкт-Петербург, Железноводская<br> ул. д. 32, пом 13Н</p>
+            </li>
+            <li>
+              <span>Телефон</span>
+              <p>+7 (921) 383-34-21</p>
+            </li>
+            <li>
+              <span>E-mail</span>
+              <p>ab@thelightspb.ru</p>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-section">
+          <h2 class="title-lg">Банковские реквизиты</h2>
+          <ul class="contact-list">
+            <li>
+              <span>Расчетный счет</span>
+              <p>40802810270010162292</p>
+            </li>
+            <li>
+              <span>Банк</span>
+              <p>МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"</p>
+            </li>
+            <li>
+              <span>Корреспондентский счет</span>
+              <p>30101810645250000092</p>
+            </li>
+            <li>
+              <span>БИК</span>
+              <p>044525092</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2 class="title-lg">Обратная связь</h2>
+        <form action="#" method="post">
+          <label class="label">
+            <p>Ваше имя</p>
+            <input type="text" class="input" placeholder="Олег" />
+          </label>
+          <label class="label">
+            <p>Ваш телефон</p>
+            <input type="tel" class="input masked" placeholder="+7 (___) ___-__-__" />
+          </label>
+          <label class="label">
+            <p>E-mail</p>
+            <input type="email" class="input" placeholder="example@mail.com" />
+          </label>
+          <label class="label">
+            <p>Коментарии</p>
+            <textarea class="textarea" placeholder="Напишите ваши комментарии"></textarea>
+          </label>
+          <label class="politic">
+            <input type="checkbox" />
+            <p>Согласие на обработку персональных данных</p>
+          </label>
+           <button type="submit" class="btn btn-yellow">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

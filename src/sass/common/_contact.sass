@@ -1,0 +1,54 @@
+.contact
+  &-list
+    font-size: 14px
+    li
+      margin-top: 25px
+      @include flexbox
+      align-items: flex-start
+      &:first-child
+        margin-top: 0
+      span
+        display: block
+        width: 280px
+        font-weight: 500
+      p
+        flex: 1
+        margin-left: 30px
+  &-social
+    @include flexbox
+    align-items: center
+    a
+      @include flexbox
+      align-items: center
+      margin-right: 35px
+      &:last-child
+        margin-right: 0
+      i
+        margin-right: 10px
+  &-map
+    position: relative
+    margin-top: 50px
+    height: 450px
+    overflow: hidden
+    & > ymaps
+      position: absolute
+      top: 0
+      left: 0
+      width: 100% !important
+      height: 100% !important
+  &-row
+    @include flexbox
+    align-items: flex-start
+    margin-top: 80px
+  &-main
+    max-width: 700px
+  &-section
+    margin-bottom: 80px
+    .title-lg
+      margin-bottom: 30px
+  &-form
+    max-width: 390px
+    margin-left: auto
+    margin-bottom: 80px
+    form
+      margin-top: 30px
