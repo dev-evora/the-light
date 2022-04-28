@@ -37,12 +37,18 @@ if ($(trendCarousel).length) {
     observer: true,
     observeParents: true,
     watchSlidesProgress: true,
-    spaceBetween: 30,
-    slidesPerView: 4,
+    spaceBetween: 10,
+    slidesPerView: 3,
     loop: true,
     navigation: {
       nextEl: '.trend-next',
       prevEl: '.trend-prev',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
     },
   });
 }
@@ -53,12 +59,18 @@ if ($(interiorCarousel).length) {
     observer: true,
     observeParents: true,
     watchSlidesProgress: true,
-    spaceBetween: 30,
-    slidesPerView: 4,
+    spaceBetween: 10,
+    slidesPerView: 3,
     loop: true,
     navigation: {
       nextEl: '.interior-next',
       prevEl: '.interior-prev',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
     },
   });
 }
