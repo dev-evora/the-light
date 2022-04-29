@@ -144,20 +144,54 @@ body
 .btn-wrap
   @include flexbox
   align-items: flex-start
+  position: relative
+  z-index: 5
 
 .btn
   display: block
   padding: 20px 40px
   font-size: 16px
-  background: #eee
   border: 0
   cursor: pointer
+  position: relative
+  transition: color .3s
+  background: transparent
   &-yellow
-    background: $color-yellow
     color: $color-black
+    &::after
+      background: $color-yellow
+    &::before
+      background: $color-gray
+    &:hover
+      color: #fff
   &-gray
-    background: $color-gray
     color: #fff
+    &::after
+      background: $color-gray
+    &::before
+      background: $color-yellow
+    &:hover
+      color: $color-black
+  &:hover
+    &::before
+      width: 100%
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -2
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    z-index: -1
+    width: 0%
+    transition: .5s
 
 .politic
   @include flexbox
