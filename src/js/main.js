@@ -194,11 +194,16 @@ $('.count').each(function (i, item) {
 card = document.querySelectorAll('.card-gallery');
 if (card) {
   const second = new Swiper('.card-gallery__thumb', {
-    spaceBetween: 20,
+    spaceBetween: 10,
     slidesPerView: 5,
     direction: 'vertical',
     watchSlidesProgress: true,
     slideToClickedSlide: true,
+    breakpoints: {
+      475: {
+        spaceBetween: 20,
+      },
+    },
   });
 
   const main = new Swiper('.card-gallery__main', {
