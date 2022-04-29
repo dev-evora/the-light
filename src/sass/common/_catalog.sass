@@ -145,6 +145,36 @@
       justify-content: space-between
       cursor: pointer
 
+    &__result
+      @include flexbox
+      align-items: flex-start
+    &__selected
+      margin-top: 20px
+      margin-right: 20px
+      padding: 6px 15px
+      border-radius: 30px
+      border: 1px solid $color-black
+      font-size: 14px
+      cursor: pointer
+      opacity: 0.35
+      transition: .2s
+      @include flexbox
+      align-items: center
+      &::after
+        content: ''
+        display: block
+        width: 10px
+        height: 10px
+        margin-left: 10px
+        background: url(../img/svg/selected.svg) no-repeat center
+      &:hover
+        opacity: 1
+    &__clear
+      opacity: 1
+      text-decoration: underline
+      &::after
+        display: none
+
   &-head__img
     position: absolute
     top: 0
