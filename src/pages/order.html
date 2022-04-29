@@ -18,8 +18,8 @@
     <h3 class="order-count">0 товаров</h3> {# счетчик сам считает и склоняет #}
     <div class="order-top">
       <ul class="order-top__links">
-        <li><a href="#"><i class="icon-pdf"></i>Скачать PDF</a></li>
-        <li><a href="#"><i class="icon-print"></i>Распечатать</a></li>
+        <li><a href="javascript:;" data-fancybox data-src="#popup-download"><i class="icon-pdf"></i>Скачать PDF</a></li>
+        <li><a href="javascript:;" data-fancybox data-src="#popup-print"><i class="icon-print"></i>Распечатать</a></li>
       </ul>
       <div class="order-top__total">Общая сумма заказа <h4 class="title-lg">144 000 ₽</h4></div>
     </div>
@@ -73,5 +73,43 @@
     </div>
   </div>
 </section>
+
+<div class="popup" id="popup-download">
+  <h2 class="title-lg">Введите данные, чтобы скачать смету</h2>
+  <form action="#" method="post">
+    <label class="label">
+      <p>Ваше имя</p>
+      <input type="tel" class="input" placeholder="Олег" />
+    </label>
+    <label class="label">
+      <p>Ваш телефон</p>
+      <input type="tel" class="input masked" placeholder="+7 (___) ___-__-__" />
+    </label>
+    <label class="politic">
+      <input type="checkbox" />
+      <p>Согласие на обработку персональных данных</p>
+    </label>
+    <div class="btn-wrap"><button type="submit" class="btn btn-yellow">Скачать смету</button></div>
+  </form>
+</div>
+
+<div class="popup" id="popup-print">
+  <h2 class="title-lg">Введите данные,чтобы распечатать смету</h2>
+  <form action="#" method="post">
+    <label class="label">
+      <p>Ваше имя</p>
+      <input type="tel" class="input" placeholder="Олег" />
+    </label>
+    <label class="label">
+      <p>Ваш телефон</p>
+      <input type="tel" class="input masked" placeholder="+7 (___) ___-__-__" />
+    </label>
+    <label class="politic">
+      <input type="checkbox" />
+      <p>Согласие на обработку персональных данных</p>
+    </label>
+    <div class="btn-wrap"><button type="submit" class="btn btn-yellow">Распечатать смету</button></div>
+  </form>
+</div>
 
 {% endblock %}
