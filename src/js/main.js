@@ -38,13 +38,16 @@ if ($(trendCarousel).length) {
     observeParents: true,
     watchSlidesProgress: true,
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 2,
     loop: true,
     navigation: {
       nextEl: '.trend-next',
       prevEl: '.trend-prev',
     },
     breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
       1024: {
         slidesPerView: 4,
         spaceBetween: 30,
@@ -60,13 +63,16 @@ if ($(interiorCarousel).length) {
     observeParents: true,
     watchSlidesProgress: true,
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 2,
     loop: true,
     navigation: {
       nextEl: '.interior-next',
       prevEl: '.interior-prev',
     },
     breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
       1024: {
         slidesPerView: 4,
         spaceBetween: 30,

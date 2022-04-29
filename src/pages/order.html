@@ -23,19 +23,21 @@
       </ul>
       <div class="order-top__total">Общая сумма заказа <h4 class="title-lg">144 000 ₽</h4></div>
     </div>
-    <div class="table">
-      <div class="table-head">
-        <div class="table-col">№</div>
-        <div class="table-col">Товар</div>
-        <div class="table-col">Описание</div>
-        <div class="table-col">Наличие</div>
-        <div class="table-col">Цена</div>
-        <div class="table-col">Количество</div>
-        <div class="table-col">Сумма</div>
+    <div class="table-scroll">
+      <div class="table">
+        <div class="table-head">
+          <div class="table-col">№</div>
+          <div class="table-col">Товар</div>
+          <div class="table-col">Описание</div>
+          <div class="table-col">Наличие</div>
+          <div class="table-col">Цена</div>
+          <div class="table-col">Количество</div>
+          <div class="table-col">Сумма</div>
+        </div>
+        {% include 'common/table-item.html' %}
+        {% include 'common/table-item.html' %}
+        {% include 'common/table-item.html' %}
       </div>
-      {% include 'common/table-item.html' %}
-      {% include 'common/table-item.html' %}
-      {% include 'common/table-item.html' %}
     </div>
     <div class="order-form">
       <h2 class="title-lg">Введите контактные данные</h2>
