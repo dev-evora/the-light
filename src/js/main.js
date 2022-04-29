@@ -1,12 +1,10 @@
 /* eslint-disable no-inner-declarations */
-const viewportFix = () => {
-  const display = screen.width;
+const viewportFix = (width) => {
   const meta = $('meta[name="viewport"]');
-  const width = 375;
-  meta.attr('content', 'user-scalable=no, width=' + (display <= width ? width : 'device-width'));
+  meta.attr('content', 'user-scalable=no, width=' + (screen.width <= width ? width : 'device-width'));
 };
 
-viewportFix();
+viewportFix(375);
 
 $('[data-fancybox]').fancybox({
   touch: false,
