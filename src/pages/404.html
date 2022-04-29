@@ -1,0 +1,18 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = '404' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="page404">
+  <div class="container">
+    <img src="img/lamp-404-1.jpg" alt="" class="page404-lamp-1">
+    <img src="img/lamp-404-2.jpg" alt="" class="page404-lamp-2">
+    <h1>404</h1>
+    <h2 class="title-lg">Ошибка<br> Страница не найдена</h2>
+    <h4 class="title-sm">Страница, которую вы ищите, не найдена.<br> Вы можете перейти на главную или найти осветительное оборудование через строку поиска.</h4>
+    <div class="btn-wrap"><a href="/" class="btn btn-yellow">Перейти на главную</a></div>
+  </div>
+</section>
+
+{% endblock %}
