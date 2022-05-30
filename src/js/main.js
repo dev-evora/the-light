@@ -191,16 +191,16 @@ $('.catalog-filter__submit button').click(function () {
 });
 
 $('.count').each(function (i, item) {
-  let min = 1;
-  const val = Number($('> input', item).val());
+  const min = 1;
+  let val = Number($('> input', item).val());
   $('> .count-btn__minus', item).click(function () {
-    if (val >= min) return;
-    min--;
-    $('> input', item).val(min);
+    if (val <= min) return;
+    val--;
+    $('> input', item).val(val);
   });
   $('> .count-btn__plus', item).click(function () {
-    min++;
-    $('> input', item).val(min);
+    val++;
+    $('> input', item).val(val);
   });
 });
 
